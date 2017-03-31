@@ -1,0 +1,64 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <script>
+    var app=angular.module("app",[]);
+        app.controller("controller",function($scope)
+                       {
+                         
+                             $scope.add=function(){
+								var a=parseInt($scope.number1);
+								var b=parseInt($scope.number2);
+								var c;
+								c=a+b;
+								 
+								$scope.result=c;
+								return $scope.result;
+							}
+						$scope.sub=function(){
+								var a=parseInt($scope.number1);
+								var b=parseInt($scope.number2);
+								var c;
+								c=a-b;
+								 
+								$scope.result=c;
+								return $scope.result;
+							}
+						$scope.mul=function(){
+								var a=parseInt($scope.number1);
+								var b=parseInt($scope.number2);
+								var c;
+								c=a*b;
+								 
+								$scope.result=c;
+								return $scope.result;
+							}
+						$scope.div=function(){
+								var a=parseInt($scope.number1);
+								var b=parseInt($scope.number2);
+								var c;
+								c=a/b;
+								 
+								$scope.result=c;
+								return $scope.result;
+							}
+                       });
+    </script></head>
+<body ng-app="app" ><DIV ng-controller="controller">
+Enter the number1 <input type="text" ng-model="number1"><br><br>
+    Enter the number2 <input type="text" ng-model="number2"><br><br>
+   
+	
+	<button ng-click="add()">add</button>
+	<button ng-click="sub()">sub</button>
+	<button ng-click="mul()">mul</button>
+	<button ng-click="div()">div</button>
+	
+	
+	the numbr is {{result}}
+	
+	
+   </DIV>
+    </body>    
+</html>
